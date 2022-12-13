@@ -1,0 +1,803 @@
+2022-11-14 10:40:07 info __main__ Loading Qudi...
+2022-11-14 10:40:09 debug core.manager Main thread is <sip.voidptr object at 0x0000018B025B8800>
+2022-11-14 10:40:09 info core.manager load.cfg config file found at C:\Users\fkala\Single_Spin_Qudi\config\load.cfg
+2022-11-14 10:40:09 info core.manager Starting Manager configuration from C:/Users/fkala/Single_Spin_Qudi/config/oy.cfg
+2022-11-14 10:40:09 info core.manager Manager configuration complete.
+2022-11-14 10:40:09 debug core.threadmanager Creating thread: "rpyc-server".
+2022-11-14 10:40:09 info core.remote Started module server at localhost on port 12345
+2022-11-14 10:40:09 info core.manager Started server rpyc://localhost:12345
+2022-11-14 10:40:09 info core.manager Qudi started.
+2022-11-14 10:40:09 info core.manager Loading module ".gui.manager.managergui"
+2022-11-14 10:40:09 info RemoteModule/12345 server started on [127.0.0.1]:12345
+2022-11-14 10:40:10 info core.manager Configuring ManagerGui as man
+2022-11-14 10:40:10 debug gui.manager.managergui.ManagerGui Activation in thread <sip.voidptr object at 0x0000018B041D6C10>
+2022-11-14 10:40:12 debug gui.manager.managergui.ManagerGui IPy activation in thread <sip.voidptr object at 0x0000018B04007198>
+2022-11-14 10:40:12 info gui.manager.managergui.ManagerGui IPython has kernel True
+2022-11-14 10:40:12 info gui.manager.managergui.ManagerGui IPython kernel alive True
+2022-11-14 10:40:12 debug core.manager Activation success: True
+2022-11-14 10:40:12 info core.manager Loading module ".gui.trayicon"
+2022-11-14 10:40:12 info core.manager Configuring TrayIcon as tray
+2022-11-14 10:40:12 debug gui.trayicon.TrayIcon Activation in thread <sip.voidptr object at 0x0000018B087E1EE0>
+2022-11-14 10:40:12 debug core.manager Activation success: True
+2022-11-14 10:41:29 info core.manager Loading module ".logic.fit_logic"
+2022-11-14 10:41:30 info core.manager Configuring FitLogic as fitlogic
+2022-11-14 10:41:31 info logic.fit_logic.FitLogic Methods were included to FitLogic, but only if naming is right: check the doxygen documentation if you added a new method and it does not show.
+2022-11-14 10:41:31 debug core.threadmanager Creating thread: "mod-logic-fitlogic".
+2022-11-14 10:41:31 debug logic.fit_logic.FitLogic Activation in thread <sip.voidptr object at 0x0000018B0A098878>
+2022-11-14 10:41:31 debug core.manager Activation success: True
+2022-11-14 10:41:31 info core.manager Loading module ".hardware.confocal_scanner_dummy"
+2022-11-14 10:41:31 info core.manager Configuring ConfocalScannerDummy as mydummyscanner
+2022-11-14 10:41:31 info core.manager Connecting hardware.mydummyscanner.fitlogic to logic.fitlogic
+2022-11-14 10:41:31 debug hardware.confocal_scanner_dummy.ConfocalScannerDummy Activation in thread <sip.voidptr object at 0x0000018B09B995F8>
+2022-11-14 10:41:31 debug core.manager Activation success: True
+2022-11-14 10:41:31 info core.manager Loading module ".hardware.swabian_instruments.timetagger_fast_and_slow_counter"
+2022-11-14 10:41:31 info core.manager Configuring TimeTaggerCounter as timetagger_counter
+2022-11-14 10:41:31 warning hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter No variable >> timetagger_channel_apd_1 << configured, using default value None instead.
+2022-11-14 10:41:31 warning hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter No variable >> timetagger_sum_channels << configured, using default value False instead.
+2022-11-14 10:41:31 debug hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter Activation in thread <sip.voidptr object at 0x0000018B09B995F8>
+2022-11-14 10:41:34 info hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter TimeTagger (fast counter) configured to use  channel 1
+2022-11-14 10:41:34 debug core.manager Activation success: True
+2022-11-14 10:41:34 info core.manager Loading module ".logic.interfuse.confocal_scanner_with_timetagger"
+2022-11-14 10:41:34 info core.manager Configuring ScannerInterfuse as scanner_external_counter_interfuse
+2022-11-14 10:41:34 warning logic.interfuse.confocal_scanner_with_timetagger.ScannerInterfuse No variable >> clock_frequency << configured, using default value 100 instead.
+2022-11-14 10:41:34 info core.manager Connecting logic.scanner_external_counter_interfuse.confocalscanner1 to hardware.mydummyscanner
+2022-11-14 10:41:34 info core.manager Connecting logic.scanner_external_counter_interfuse.slowcounter to hardware.timetagger_counter
+2022-11-14 10:41:34 debug logic.interfuse.confocal_scanner_with_timetagger.ScannerInterfuse Activation in thread <sip.voidptr object at 0x0000018B0A14C3A0>
+2022-11-14 10:41:34 debug core.manager Activation success: True
+2022-11-14 10:41:34 info core.manager Loading module ".logic.optimizer_logic"
+2022-11-14 10:41:34 info core.manager Configuring OptimizerLogic as optimizerlogic
+2022-11-14 10:41:34 info core.manager Connecting logic.optimizerlogic.confocalscanner1 to logic.scanner_external_counter_interfuse
+2022-11-14 10:41:34 info core.manager Connecting logic.optimizerlogic.fitlogic to logic.fitlogic
+2022-11-14 10:41:34 debug core.threadmanager Creating thread: "mod-logic-optimizerlogic".
+2022-11-14 10:41:34 debug logic.optimizer_logic.OptimizerLogic Activation in thread <sip.voidptr object at 0x0000018B0A14C9B8>
+2022-11-14 10:41:34 debug core.manager Activation success: True
+2022-11-14 10:41:34 info core.manager Loading module ".logic.save_logic"
+2022-11-14 10:41:34 info core.manager Configuring SaveLogic as savelogic
+2022-11-14 10:41:34 debug core.threadmanager Creating thread: "mod-logic-savelogic".
+2022-11-14 10:41:34 debug logic.save_logic.SaveLogic Activation in thread <sip.voidptr object at 0x0000018B0A2872B0>
+2022-11-14 10:41:34 info logic.save_logic.SaveLogic Creating directory for today's data:
+C:/Data\2022\11\20221114
+2022-11-14 10:41:34 debug core.manager Activation success: True
+2022-11-14 10:41:34 info core.manager Loading module ".logic.confocal_logic"
+2022-11-14 10:41:34 info core.manager Configuring ConfocalLogic as scannerlogic
+2022-11-14 10:41:34 info core.manager Connecting logic.scannerlogic.confocalscanner1 to logic.scanner_external_counter_interfuse
+2022-11-14 10:41:34 info core.manager Connecting logic.scannerlogic.savelogic to logic.savelogic
+2022-11-14 10:41:35 debug core.threadmanager Creating thread: "mod-logic-scannerlogic".
+2022-11-14 10:41:35 debug logic.confocal_logic.ConfocalLogic Activation in thread <sip.voidptr object at 0x0000018B0A3AA5A8>
+2022-11-14 10:41:35 debug core.manager Activation success: True
+2022-11-14 10:41:35 info core.manager Loading module ".hardware.swabian_instruments.pulse_streamer_with_waveform_memory"
+2022-11-14 10:41:35 info core.manager Configuring PulseStreamer as pulsestreamer
+2022-11-14 10:41:35 warning hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer No variable >> gated_counter_channel << configured, using default value 1 instead.
+2022-11-14 10:41:35 warning hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer No variable >> uw_list_trigger_channel << configured, using default value 4 instead.
+2022-11-14 10:41:35 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer No variable >> use_external_clock << configured, using default value False instead.
+2022-11-14 10:41:35 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer No variable >> external_clock_option << configured, using default value 0 instead.
+2022-11-14 10:41:35 debug hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Activation in thread <sip.voidptr object at 0x0000018B0A3EB620>
+2022-11-14 10:41:35 debug core.manager Activation success: True
+2022-11-14 10:41:35 info core.manager Loading module ".logic.pulsed.sequence_logic_for_pulser"
+2022-11-14 10:41:35 info core.manager Configuring SequenceLogicForPulser as sequence_pulser_logic
+2022-11-14 10:41:35 debug logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser The following configuration was found.
+2022-11-14 10:41:35 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser module.Class: pulsed.sequence_logic_for_pulser.SequenceLogicForPulser
+2022-11-14 10:41:35 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser connect: OrderedDict([('pulsegenerator', 'pulsestreamer'), ('optimizerlogic', 'optimizerlogic'), ('scannerlogic', 'scannerlogic')])
+2022-11-14 10:41:35 info core.manager Connecting logic.sequence_pulser_logic.pulsegenerator to hardware.pulsestreamer
+2022-11-14 10:41:35 info core.manager Connecting logic.sequence_pulser_logic.optimizerlogic to logic.optimizerlogic
+2022-11-14 10:41:35 info core.manager Connecting logic.sequence_pulser_logic.scannerlogic to logic.scannerlogic
+2022-11-14 10:41:35 debug core.threadmanager Creating thread: "mod-logic-sequence_pulser_logic".
+2022-11-14 10:41:35 debug logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Activation in thread <sip.voidptr object at 0x0000018B0A44A620>
+2022-11-14 10:41:35 debug core.manager Activation success: True
+2022-11-14 10:41:35 info core.manager Loading module ".gui.pulsestreamer.pulsestreamergui"
+2022-11-14 10:41:35 info core.manager Configuring pulsestreamerGui as pulsestreamer_output
+2022-11-14 10:41:35 info core.manager Connecting gui.pulsestreamer_output.pulsestreamer to logic.sequence_pulser_logic
+2022-11-14 10:41:35 debug gui.pulsestreamer.pulsestreamergui.pulsestreamerGui Activation in thread <sip.voidptr object at 0x0000018B0A3EB7D8>
+2022-11-14 10:41:35 debug core.manager Activation success: True
+2022-11-22 10:34:08 info core.manager Loading module ".logic.counter_logic"
+2022-11-22 10:34:08 info logic.save_logic.SaveLogic Creating directory for today's data:
+C:/Data\2022\11\20221122
+2022-11-22 10:34:08 info core.manager Configuring CounterLogic as counterlogic
+2022-11-22 10:34:08 debug logic.counter_logic.CounterLogic The following configuration was found.
+2022-11-22 10:34:08 debug logic.counter_logic.CounterLogic module.Class: counter_logic.CounterLogic
+2022-11-22 10:34:08 debug logic.counter_logic.CounterLogic connect: OrderedDict([('counter1', 'timetagger_counter'), ('savelogic', 'savelogic')])
+2022-11-22 10:34:08 info core.manager Connecting logic.counterlogic.counter1 to hardware.timetagger_counter
+2022-11-22 10:34:08 info core.manager Connecting logic.counterlogic.savelogic to logic.savelogic
+2022-11-22 10:34:08 debug core.threadmanager Creating thread: "mod-logic-counterlogic".
+2022-11-22 10:34:08 debug logic.counter_logic.CounterLogic Activation in thread <sip.voidptr object at 0x0000018B0A2875F8>
+2022-11-22 10:34:08 debug core.manager Activation success: True
+2022-11-22 10:34:08 info core.manager Loading module ".gui.counter.countergui"
+2022-11-22 10:34:09 info core.manager Configuring CounterGui as counter
+2022-11-22 10:34:09 info core.manager Connecting gui.counter.counterlogic1 to logic.counterlogic
+2022-11-22 10:34:09 debug gui.counter.countergui.CounterGui Activation in thread <sip.voidptr object at 0x0000018B0A287620>
+2022-11-22 10:34:09 debug core.manager Activation success: True
+2022-11-22 10:34:16 info core.manager Loading module ".hardware.microwave.mw_source_dummy"
+2022-11-22 10:34:16 info core.manager Configuring MicrowaveDummy as mw_source_agilent
+2022-11-22 10:34:16 debug hardware.microwave.mw_source_dummy.MicrowaveDummy Activation in thread <sip.voidptr object at 0x0000018B0A5F2940>
+2022-11-22 10:34:16 debug core.manager Activation success: True
+2022-11-22 10:34:16 info core.manager Loading module ".logic.pulsed.pulsed_measurement_logic"
+2022-11-22 10:34:16 info core.manager Configuring PulsedMeasurementLogic as pulsedmeasurementlogic
+2022-11-22 10:34:16 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The following configuration was found.
+2022-11-22 10:34:16 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic module.Class: pulsed.pulsed_measurement_logic.PulsedMeasurementLogic
+2022-11-22 10:34:16 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic raw_data_save_type: text
+2022-11-22 10:34:16 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic connect: OrderedDict([('fastcounter', 'timetagger_counter'), ('pulsegenerator', 'sequence_pulser_logic'), ('fitlogic', 'fitlogic'), ('savelogic', 'savelogic'), ('microwave', 'mw_source_agilent')])
+2022-11-22 10:34:16 info core.manager Connecting logic.pulsedmeasurementlogic.fastcounter to hardware.timetagger_counter
+2022-11-22 10:34:16 info core.manager Connecting logic.pulsedmeasurementlogic.pulsegenerator to logic.sequence_pulser_logic
+2022-11-22 10:34:16 info core.manager Connecting logic.pulsedmeasurementlogic.fitlogic to logic.fitlogic
+2022-11-22 10:34:16 info core.manager Connecting logic.pulsedmeasurementlogic.savelogic to logic.savelogic
+2022-11-22 10:34:16 info core.manager Connecting logic.pulsedmeasurementlogic.microwave to hardware.mw_source_agilent
+2022-11-22 10:34:16 debug core.threadmanager Creating thread: "mod-logic-pulsedmeasurementlogic".
+2022-11-22 10:34:16 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Activation in thread <sip.voidptr object at 0x0000018B053D4A80>
+2022-11-22 10:34:16 debug core.manager Activation success: True
+2022-11-22 10:34:16 info core.manager Loading module ".logic.pulsed.sequence_generator_logic_swabian"
+2022-11-22 10:34:16 info core.manager Configuring SequenceGeneratorLogic as sequencegeneratorlogic
+2022-11-22 10:34:16 warning logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic No variable >> assets_storage_path << configured, using default value C:\Users\fkala\saved_pulsed_assets instead.
+2022-11-22 10:34:17 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic The following configuration was found.
+2022-11-22 10:34:17 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic module.Class: pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic
+2022-11-22 10:34:17 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic connect: OrderedDict([('pulsegenerator', 'sequence_pulser_logic')])
+2022-11-22 10:34:17 info core.manager Connecting logic.sequencegeneratorlogic.pulsegenerator to logic.sequence_pulser_logic
+2022-11-22 10:34:17 debug core.threadmanager Creating thread: "mod-logic-sequencegeneratorlogic".
+2022-11-22 10:34:17 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Activation in thread <sip.voidptr object at 0x0000018B054475A8>
+2022-11-22 10:34:17 debug core.manager Activation success: True
+2022-11-22 10:34:17 info core.manager Loading module ".logic.pulsed.pulsed_master_logic"
+2022-11-22 10:34:17 info core.manager Configuring PulsedMasterLogic as pulsedmasterlogic
+2022-11-22 10:34:17 info core.manager Connecting logic.pulsedmasterlogic.pulsedmeasurementlogic to logic.pulsedmeasurementlogic
+2022-11-22 10:34:17 info core.manager Connecting logic.pulsedmasterlogic.sequencegeneratorlogic to logic.sequencegeneratorlogic
+2022-11-22 10:34:17 debug core.threadmanager Creating thread: "mod-logic-pulsedmasterlogic".
+2022-11-22 10:34:17 debug logic.pulsed.pulsed_master_logic.PulsedMasterLogic Activation in thread <sip.voidptr object at 0x0000018B0A3AAA80>
+2022-11-22 10:34:17 debug core.manager Activation success: True
+2022-11-22 10:34:17 info core.manager Loading module ".gui.pulsed.pulsed_maingui"
+2022-11-22 10:34:17 info core.manager Configuring PulsedMeasurementGui as pulsedmeasurement
+2022-11-22 10:34:17 info core.manager Connecting gui.pulsedmeasurement.pulsedmasterlogic to logic.pulsedmasterlogic
+2022-11-22 10:34:17 debug gui.pulsed.pulsed_maingui.PulsedMeasurementGui Activation in thread <sip.voidptr object at 0x0000018B05447788>
+2022-11-22 10:34:17 debug core.manager Activation success: True
+2022-11-22 10:34:48 info hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter set up counter with 50
+2022-11-22 12:03:00 error hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer no sequence/pulse pattern prepared for the pulse streamer
+2022-11-22 12:03:00 error logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Failed to turn on pulse generator output.
+2022-11-22 12:03:05 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-11-22 12:03:10 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-11-22 12:03:13 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-11-22 12:03:13 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:03:37 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 228360050, mod 0
+2022-11-22 12:03:42 error hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer no sequence/pulse pattern prepared for the pulse streamer
+2022-11-22 12:03:42 error logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Failed to turn on pulse generator output.
+2022-11-22 12:03:47 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-11-22 12:03:48 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble T1 to device: 11 sec
+2022-11-22 12:03:48 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseSequence T1 to device: 11 sec.
+2022-11-22 12:03:48 error logic.pulsed.pulsed_master_logic.PulsedMasterLogic Loading of sequence not possible while measurement is running.
+PulseSequence "T1" not loaded!
+2022-11-22 12:03:48 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-11-22 12:03:52 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-11-22 12:03:57 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-11-22 12:04:02 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-11-22 12:04:02 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:04:29 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Waveform already sampled: T1
+2022-11-22 12:04:29 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseSequence T1 to device: 0 sec.
+2022-11-22 12:04:29 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-11-22 12:04:42 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 12:06:36 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 12:06:36 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 12:06:36 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:06:41 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 12:06:46 debug logic.save_logic.SaveLogic Time needed to save data: 0.71s
+2022-11-22 12:06:59 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 12:08:53 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 12:08:53 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 12:08:53 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:08:58 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 12:09:03 debug logic.save_logic.SaveLogic Time needed to save data: 0.67s
+2022-11-22 12:20:40 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 12:22:35 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 12:22:35 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 12:22:35 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:22:40 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 12:22:47 debug logic.save_logic.SaveLogic Time needed to save data: 0.67s
+2022-11-22 12:22:53 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 12:24:48 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 12:24:48 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 12:24:48 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:24:53 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 12:24:56 debug logic.save_logic.SaveLogic Time needed to save data: 0.66s
+2022-11-22 12:30:44 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 12:32:38 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 12:32:38 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 12:32:38 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:32:43 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 12:38:54 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 12:40:49 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 12:40:49 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 12:40:49 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:40:54 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 12:41:04 debug logic.save_logic.SaveLogic Time needed to save data: 0.73s
+2022-11-22 12:41:18 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 12:43:13 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 12:43:13 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 12:43:13 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:43:18 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 12:43:54 debug logic.save_logic.SaveLogic Time needed to save data: 0.71s
+2022-11-22 12:44:05 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 12:45:59 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 12:45:59 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 12:45:59 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 12:46:04 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 12:46:29 debug logic.save_logic.SaveLogic Time needed to save data: 0.71s
+2022-11-22 13:58:37 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 14:00:31 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 14:00:31 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 14:00:32 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 14:00:37 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 14:01:35 debug logic.save_logic.SaveLogic Time needed to save data: 0.71s
+2022-11-22 14:01:37 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 14:03:31 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 14:03:31 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 14:03:32 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 14:03:37 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 14:03:43 debug logic.save_logic.SaveLogic Time needed to save data: 0.71s
+2022-11-22 15:18:00 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 15:19:08 debug logic.save_logic.SaveLogic Time needed to save data: 1.01s
+2022-11-22 15:19:12 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 15:19:12 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 15:19:12 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 15:19:17 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 15:21:35 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 15:23:30 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 15:23:30 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 15:23:30 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 15:23:35 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 15:32:24 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 15:34:16 debug logic.save_logic.SaveLogic Time needed to save data: 0.74s
+2022-11-22 15:34:19 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 15:34:19 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 15:34:19 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 15:34:24 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 15:40:23 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 15:40:36 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 15:40:36 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 15:40:36 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 15:40:41 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-22 15:43:54 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-11-22 15:45:41 debug logic.save_logic.SaveLogic Time needed to save data: 0.76s
+2022-11-22 15:45:49 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-11-22 15:45:49 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-11-22 15:45:49 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-11-22 15:45:54 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-11-28 11:17:05 info hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter set up counter with 50
+2022-11-28 11:17:05 info logic.save_logic.SaveLogic Creating directory for today's data:
+C:/Data\2022\11\20221128
+2022-11-28 15:48:22 info core.manager Loading module ".logic.poi_manager_logic"
+2022-11-28 15:48:22 info core.manager Configuring PoiManagerLogic as poimanagerlogic
+2022-11-28 15:48:22 info core.manager Connecting logic.poimanagerlogic.scannerlogic to logic.scannerlogic
+2022-11-28 15:48:22 info core.manager Connecting logic.poimanagerlogic.optimiserlogic to logic.optimizerlogic
+2022-11-28 15:48:22 info core.manager Connecting logic.poimanagerlogic.savelogic to logic.savelogic
+2022-11-28 15:48:22 error core.manager Failed to load status variables.
+Traceback (most recent call last):
+  File "C:\Users\fkala\Single_Spin_Qudi\core\manager.py", line 1317, in loadStatusVariables
+    variables = config.load(filename)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\config.py", line 239, in load
+    return ordered_load(f, yaml.SafeLoader)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\config.py", line 131, in ordered_load
+    config = yaml.load(stream, OrderedLoader)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\main.py", line 639, in load
+    return loader._constructor.get_single_data()  # type: ignore
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\constructor.py", line 105, in get_single_data
+    return self.construct_document(node)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\constructor.py", line 110, in construct_document
+    data = self.construct_object(node)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\constructor.py", line 160, in construct_object
+    data = constructor(self, node)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\config.py", line 63, in construct_mapping
+    return OrderedDict(loader.construct_pairs(node))
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\constructor.py", line 277, in construct_pairs
+    value = self.construct_object(value_node, deep=deep)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\constructor.py", line 160, in construct_object
+    data = constructor(self, node)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\config.py", line 63, in construct_mapping
+    return OrderedDict(loader.construct_pairs(node))
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\constructor.py", line 277, in construct_pairs
+    value = self.construct_object(value_node, deep=deep)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\constructor.py", line 160, in construct_object
+    data = constructor(self, node)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\config.py", line 80, in construct_external_ndarray
+    arrays = numpy.load(filename)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\numpy\lib\npyio.py", line 372, in load
+    fid = open(file, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/Qpitlab/Single_Spin_Qudi/config\\app_status\\status-PoiManagerLogic_logic_poimanagerlogic-000000.npz'
+2022-11-28 15:48:22 warning Qt QWindowsWindow::setGeometry: Unable to set geometry 506x140+625+491 on QWidgetWindow/'ErrorDialogClassWindow'. Resulting geometry:  506x178+625+491 (frame: 11, 45, 11, 11, custom margin: 0, 0, 0, 0, minimum size: 506x140, maximum size: 16777215x16777215).
+2022-11-28 15:48:22 debug core.threadmanager Creating thread: "mod-logic-poimanagerlogic".
+2022-11-28 15:48:22 debug logic.poi_manager_logic.PoiManagerLogic Activation in thread <sip.voidptr object at 0x0000018B0EA9D058>
+2022-11-28 15:48:22 debug core.manager Activation success: True
+2022-11-28 15:48:23 info core.manager Loading module ".gui.poimanager.poimangui"
+2022-11-28 15:48:23 info core.manager Configuring PoiManagerGui as poimanager
+2022-11-28 15:48:23 info core.manager Connecting gui.poimanager.poimanagerlogic to logic.poimanagerlogic
+2022-11-28 15:48:23 info core.manager Connecting gui.poimanager.scannerlogic to logic.scannerlogic
+2022-11-28 15:48:23 debug gui.poimanager.poimangui.PoiManagerGui Activation in thread <sip.voidptr object at 0x0000018B0EA97F80>
+2022-11-28 15:48:23 debug core.manager Activation success: True
+2022-12-01 09:17:51 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 45050, mod 0
+2022-12-01 09:17:51 info logic.save_logic.SaveLogic Creating directory for today's data:
+C:/Data\2022\12\20221201
+2022-12-01 09:17:52 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble T1_exp to device: 0 sec
+2022-12-01 09:17:52 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 09:18:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:18:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:18:10 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:18:10 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 09:18:31 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 45050, mod 0
+2022-12-01 09:18:31 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble T1_exp to device: 0 sec
+2022-12-01 09:18:32 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 09:19:01 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 45050, mod 0
+2022-12-01 09:19:01 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble test to device: 0 sec
+2022-12-01 09:19:21 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:19:26 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:19:31 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:19:36 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:19:41 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:19:46 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:19:51 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:19:56 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:20:01 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:20:03 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:20:03 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 09:20:28 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 45050, mod 0
+2022-12-01 09:20:28 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble test to device: 0 sec
+2022-12-01 09:20:31 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 45050, mod 0
+2022-12-01 09:20:31 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble test to device: 0 sec
+2022-12-01 09:20:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:20:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:20:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:20:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:20:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:21:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:22:39 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 09:22:53 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 60478, mod 0
+2022-12-01 09:22:53 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble test to device: 0 sec
+2022-12-01 09:23:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:23:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:24:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:25:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:26:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:27:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:28:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:29:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:30:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:31:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:32:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:33:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:34:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:35:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:36:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:37:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:38:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:39:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:40:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:41:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:42:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:43:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:44:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:45:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:04 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:09 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:14 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:19 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:44 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:49 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:54 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:46:59 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:47:01 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 09:47:02 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 09:49:30 info core.manager load.cfg config file found at C:\Users\fkala\Single_Spin_Qudi\config\load.cfg
+2022-12-01 09:49:31 info core.manager Set loaded configuration to C:/Users/fkala/Single_Spin_Qudi/config/oy.cfg
+2022-12-01 09:49:31 info core.manager Restarting Qudi after configuration reload.
+2022-12-01 09:49:31 info core.manager Deactivating hardware.mydummyscanner
+2022-12-01 09:49:32 debug hardware.confocal_scanner_dummy.ConfocalScannerDummy Deactivation in thread <sip.voidptr object at 0x0000018B0AEAC990>
+2022-12-01 09:49:32 warning hardware.confocal_scanner_dummy.ConfocalScannerDummy Scanning Device will be reset.
+2022-12-01 09:49:32 debug core.manager Deactivation success: True
+2022-12-01 09:49:32 info core.manager Deactivating hardware.timetagger_counter
+2022-12-01 09:49:32 debug hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter Deactivation in thread <sip.voidptr object at 0x0000018B0AEAC990>
+2022-12-01 09:49:32 debug core.manager Deactivation success: True
+2022-12-01 09:49:33 info core.manager Deactivating hardware.pulsestreamer
+2022-12-01 09:49:33 debug hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Deactivation in thread <sip.voidptr object at 0x0000018B0AEAC990>
+2022-12-01 09:49:33 error core.manager Failed to save status variables of module hardware.pulsestreamer:
+OrderedDict([('current_waveform', {'d_ch1': [[1000, 0], [2000, 0], [500, 0], [1000, 0], [1196, 0], [2000, 0], [500, 0], [1000, 0], [1430, 0], [2000, 0], [500, 0], [1000, 0], [1710, 0], [2000, 0], [500, 0], [1000, 0], [2045, 0], [2000, 0], [500, 0], [1000, 0], [2445, 0], [2000, 0], [500, 0], [1000, 0], [2924, 0], [2000, 0], [500, 0], [1000, 0], [3496, 0], [2000, 0], [500, 0], [1000, 0], [4182, 0], [2000, 0], [500, 0], [1000, 0], [5000, 0], [2000, 0], [500, 0], [1000, 0], [50, 0]], 'd_ch2': [[1000, 0], [2000, 1], [500, 1], [1000, 0], [1196, 0], [2000, 1], [500, 1], [1000, 0], [1430, 0], [2000, 1], [500, 1], [1000, 0], [1710, 0], [2000, 1], [500, 1], [1000, 0], [2045, 0], [2000, 1], [500, 1], [1000, 0], [2445, 0], [2000, 1], [500, 1], [1000, 0], [2924, 0], [2000, 1], [500, 1], [1000, 0], [3496, 0], [2000, 1], [500, 1], [1000, 0], [4182, 0], [2000, 1], [500, 1], [1000, 0], [5000, 0], [2000, 1], [500, 1], [1000, 0], [50, 0]], 'd_ch3': [[1000, 0], [2000, 0], [500, 0], [1000, 0], [1196, 0], [2000, 0], [500, 0], [1000, 0], [1430, 0], [2000, 0], [500, 0], [1000, 0], [1710, 0], [2000, 0], [500, 0], [1000, 0], [2045, 0], [2000, 0], [500, 0], [1000, 0], [2445, 0], [2000, 0], [500, 0], [1000, 0], [2924, 0], [2000, 0], [500, 0], [1000, 0], [3496, 0], [2000, 0], [500, 0], [1000, 0], [4182, 0], [2000, 0], [500, 0], [1000, 0], [5000, 0], [2000, 0], [500, 0], [1000, 0], [50, 0]], 'd_ch4': [[1000, 0], [2000, 0], [500, 0], [1000, 0], [1196, 0], [2000, 0], [500, 0], [1000, 0], [1430, 0], [2000, 0], [500, 0], [1000, 0], [1710, 0], [2000, 0], [500, 0], [1000, 0], [2045, 0], [2000, 0], [500, 0], [1000, 0], [2445, 0], [2000, 0], [500, 0], [1000, 0], [2924, 0], [2000, 0], [500, 0], [1000, 0], [3496, 0], [2000, 0], [500, 0], [1000, 0], [4182, 0], [2000, 0], [500, 0], [1000, 0], [5000, 0], [2000, 0], [500, 0], [1000, 0], [50, 1]], 'd_ch5': [[1000, 0], [2000, 1], [500, 0], [1000, 0], [1196, 0], [2000, 1], [500, 0], [1000, 0], [1430, 0], [2000, 1], [500, 0], [1000, 0], [1710, 0], [2000, 1], [500, 0], [1000, 0], [2045, 0], [2000, 1], [500, 0], [1000, 0], [2445, 0], [2000, 1], [500, 0], [1000, 0], [2924, 0], [2000, 1], [500, 0], [1000, 0], [3496, 0], [2000, 1], [500, 0], [1000, 0], [4182, 0], [2000, 1], [500, 0], [1000, 0], [5000, 0], [2000, 1], [500, 0], [1000, 0], [50, 0]], 'd_ch6': [[1000, 0], [2000, 0], [500, 0], [1000, 0], [1196, 0], [2000, 0], [500, 0], [1000, 0], [1430, 0], [2000, 0], [500, 0], [1000, 0], [1710, 0], [2000, 0], [500, 0], [1000, 0], [2045, 0], [2000, 0], [500, 0], [1000, 0], [2445, 0], [2000, 0], [500, 0], [1000, 0], [2924, 0], [2000, 0], [500, 0], [1000, 0], [3496, 0], [2000, 0], [500, 0], [1000, 0], [4182, 0], [2000, 0], [500, 0], [1000, 0], [5000, 0], [2000, 0], [500, 0], [1000, 0], [50, 0]], 'd_ch7': [[1000, 0], [2000, 0], [500, 0], [1000, 0], [1196, 0], [2000, 0], [500, 0], [1000, 0], [1430, 0], [2000, 0], [500, 0], [1000, 0], [1710, 0], [2000, 0], [500, 0], [1000, 0], [2045, 0], [2000, 0], [500, 0], [1000, 0], [2445, 0], [2000, 0], [500, 0], [1000, 0], [2924, 0], [2000, 0], [500, 0], [1000, 0], [3496, 0], [2000, 0], [500, 0], [1000, 0], [4182, 0], [2000, 0], [500, 0], [1000, 0], [5000, 0], [2000, 0], [500, 0], [1000, 0], [50, 0]], 'd_ch8': [[1000, 0], [2000, 0], [500, 0], [1000, 0], [1196, 0], [2000, 0], [500, 0], [1000, 0], [1430, 0], [2000, 0], [500, 0], [1000, 0], [1710, 0], [2000, 0], [500, 0], [1000, 0], [2045, 0], [2000, 0], [500, 0], [1000, 0], [2445, 0], [2000, 0], [500, 0], [1000, 0], [2924, 0], [2000, 0], [500, 0], [1000, 0], [3496, 0], [2000, 0], [500, 0], [1000, 0], [4182, 0], [2000, 0], [500, 0], [1000, 0], [5000, 0], [2000, 0], [500, 0], [1000, 0], [50, 0]], 'a_ch1': [[1000, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [1196, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [1430, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [1710, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [2045, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [2445, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [2924, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [3496, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [4182, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [5000, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [50, 0.0]], 'a_ch2': [[1000, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [1196, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [1430, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [1710, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [2045, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [2445, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [2924, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [3496, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [4182, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [5000, 0.0], [2000, 0.0], [500, 0.0], [1000, 0.0], [50, 0.0]]}), ('current_waveform_name', 'test'), ('sample_rate', 1000000000.0), ('generated_waveforms_list', {'T1': <pulsestreamer.sequence.Sequence object at 0x0000018B05644DA0>, 'T1_exp': <pulsestreamer.sequence.Sequence object at 0x0000018B0FBBDD68>, 'test': <pulsestreamer.sequence.Sequence object at 0x0000018B0580B160>})])
+Traceback (most recent call last):
+  File "C:\Users\fkala\Single_Spin_Qudi\core\manager.py", line 1297, in saveStatusVariables
+    config.save(filename, variables)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\config.py", line 250, in save
+    ordered_dump(data, stream=f, Dumper=yaml.SafeDumper, default_flow_style=False)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\config.py", line 227, in ordered_dump
+    return yaml.dump(data, stream, OrderedDumper, **kwds)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\main.py", line 849, in dump
+    version=version, tags=tags, block_seq_indent=block_seq_indent)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\main.py", line 810, in dump_all
+    dumper._representer.represent(data)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\representer.py", line 73, in represent
+    node = self.represent_data(data)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\representer.py", line 101, in represent_data
+    node = self.yaml_representers[data_types[0]](self, data)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\config.py", line 165, in represent_ordereddict
+    dict_data.items())
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\representer.py", line 206, in represent_mapping
+    node_value = self.represent_data(item_value)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\representer.py", line 101, in represent_data
+    node = self.yaml_representers[data_types[0]](self, data)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\representer.py", line 342, in represent_dict
+    return self.represent_mapping(u'tag:yaml.org,2002:map', data)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\representer.py", line 206, in represent_mapping
+    node_value = self.represent_data(item_value)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\representer.py", line 111, in represent_data
+    node = self.yaml_representers[None](self, data)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\ruamel\yaml\representer.py", line 375, in represent_undefined
+    raise RepresenterError("cannot represent an object: %s" % data)
+ruamel.yaml.representer.RepresenterError: cannot represent an object: <pulsestreamer.sequence.Sequence object at 0x0000018B05644DA0>
+2022-12-01 09:49:33 warning Qt QWindowsWindow::setGeometry: Unable to set geometry 506x178+858+662 on QWidgetWindow/'ErrorDialogClassWindow'. Resulting geometry:  506x1641+858+662 (frame: 11, 45, 11, 11, custom margin: 0, 0, 0, 0, minimum size: 506x140, maximum size: 16777215x16777215).
+2022-12-01 09:49:34 debug core.manager Deactivation success: True
+2022-12-01 09:49:34 info core.manager Deactivating hardware.mw_source_agilent
+2022-12-01 09:49:34 debug hardware.microwave.mw_source_dummy.MicrowaveDummy Deactivation in thread <sip.voidptr object at 0x0000018B0A3EB738>
+2022-12-01 09:49:34 debug core.manager Deactivation success: True
+2022-12-01 09:49:34 info core.manager Deactivating gui.man
+2022-12-01 09:49:35 debug gui.manager.managergui.ManagerGui Deactivation in thread <sip.voidptr object at 0x0000018B0A3EB738>
+2022-12-01 09:49:35 debug gui.manager.managergui.ManagerGui IPy deactivation: <sip.voidptr object at 0x0000018B0A3EB6C0>
+2022-12-01 09:49:35 debug core.manager Deactivation success: True
+2022-12-01 09:49:35 info core.manager Deactivating gui.tray
+2022-12-01 09:49:35 debug gui.trayicon.TrayIcon Deactivation in thread <sip.voidptr object at 0x0000018B0A3EB760>
+2022-12-01 09:49:35 debug core.manager Deactivation success: True
+2022-12-01 09:49:35 info core.manager Deactivating gui.pulsestreamer_output
+2022-12-01 09:49:36 debug gui.pulsestreamer.pulsestreamergui.pulsestreamerGui Deactivation in thread <sip.voidptr object at 0x0000018B0A3EB760>
+2022-12-01 09:49:36 debug core.manager Deactivation success: True
+2022-12-01 09:49:36 info core.manager Deactivating gui.counter
+2022-12-01 09:49:36 debug gui.counter.countergui.CounterGui Deactivation in thread <sip.voidptr object at 0x0000018B0A3EB6E8>
+2022-12-01 09:49:36 debug core.manager Deactivation success: True
+2022-12-01 09:49:36 info core.manager Deactivating gui.pulsedmeasurement
+2022-12-01 09:49:36 debug gui.pulsed.pulsed_maingui.PulsedMeasurementGui Deactivation in thread <sip.voidptr object at 0x0000018B0A3EB6E8>
+2022-12-01 09:49:37 debug core.manager Deactivation success: True
+2022-12-01 09:49:37 info core.manager Deactivating gui.poimanager
+2022-12-01 09:49:37 debug gui.poimanager.poimangui.PoiManagerGui Deactivation in thread <sip.voidptr object at 0x0000018B0AEAC2B0>
+2022-12-01 09:49:37 debug core.manager Deactivation success: True
+2022-12-01 09:49:37 info core.manager Deactivating logic.fitlogic
+2022-12-01 09:49:37 debug logic.fit_logic.FitLogic Deactivation in thread <sip.voidptr object at 0x0000018B0AEAC210>
+2022-12-01 09:49:37 debug core.threadmanager Quitting thread mod-logic-fitlogic.
+2022-12-01 09:49:37 debug core.threadmanager Waiting for thread mod-logic-fitlogic to end.
+2022-12-01 09:49:37 debug core.manager Deactivation success: True
+2022-12-01 09:49:38 debug core.threadmanager Thread mod-logic-fitlogic has quit.
+2022-12-01 09:49:38 debug core.threadmanager Cleaning up thread mod-logic-fitlogic.
+2022-12-01 09:49:38 info core.manager Deactivating logic.scanner_external_counter_interfuse
+2022-12-01 09:49:38 debug logic.interfuse.confocal_scanner_with_timetagger.ScannerInterfuse Deactivation in thread <sip.voidptr object at 0x0000018B09F5C288>
+2022-12-01 09:49:38 warning logic.interfuse.confocal_scanner_with_timetagger.ScannerInterfuse Scanning Device will be reset.
+2022-12-01 09:49:38 debug core.manager Deactivation success: True
+2022-12-01 09:49:38 info core.manager Deactivating logic.optimizerlogic
+2022-12-01 09:49:39 debug logic.optimizer_logic.OptimizerLogic Deactivation in thread <sip.voidptr object at 0x0000018B0AEAC2B0>
+2022-12-01 09:49:39 debug core.threadmanager Quitting thread mod-logic-optimizerlogic.
+2022-12-01 09:49:39 debug core.threadmanager Waiting for thread mod-logic-optimizerlogic to end.
+2022-12-01 09:49:39 debug core.manager Deactivation success: True
+2022-12-01 09:49:39 debug core.threadmanager Thread mod-logic-optimizerlogic has quit.
+2022-12-01 09:49:39 debug core.threadmanager Cleaning up thread mod-logic-optimizerlogic.
+2022-12-01 09:49:39 info core.manager Deactivating logic.savelogic
+2022-12-01 09:49:39 debug logic.save_logic.SaveLogic Deactivation in thread <sip.voidptr object at 0x0000018B0AEAC580>
+2022-12-01 09:49:39 debug core.threadmanager Quitting thread mod-logic-savelogic.
+2022-12-01 09:49:39 debug core.threadmanager Waiting for thread mod-logic-savelogic to end.
+2022-12-01 09:49:39 debug core.manager Deactivation success: True
+2022-12-01 09:49:39 debug core.threadmanager Thread mod-logic-savelogic has quit.
+2022-12-01 09:49:39 debug core.threadmanager Cleaning up thread mod-logic-savelogic.
+2022-12-01 09:49:39 info core.manager Deactivating logic.scannerlogic
+2022-12-01 09:49:40 debug logic.confocal_logic.ConfocalLogic Deactivation in thread <sip.voidptr object at 0x0000018B0A14CA30>
+2022-12-01 09:49:40 debug core.threadmanager Quitting thread mod-logic-scannerlogic.
+2022-12-01 09:49:40 debug core.threadmanager Waiting for thread mod-logic-scannerlogic to end.
+2022-12-01 09:49:40 debug core.manager Deactivation success: True
+2022-12-01 09:49:40 debug core.threadmanager Thread mod-logic-scannerlogic has quit.
+2022-12-01 09:49:40 debug core.threadmanager Cleaning up thread mod-logic-scannerlogic.
+2022-12-01 09:49:40 info core.manager Deactivating logic.sequence_pulser_logic
+2022-12-01 09:49:40 debug logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Deactivation in thread <sip.voidptr object at 0x0000018B0A3AA4E0>
+2022-12-01 09:49:40 debug core.threadmanager Quitting thread mod-logic-sequence_pulser_logic.
+2022-12-01 09:49:40 debug core.threadmanager Waiting for thread mod-logic-sequence_pulser_logic to end.
+2022-12-01 09:49:40 debug core.manager Deactivation success: True
+2022-12-01 09:49:40 debug core.threadmanager Thread mod-logic-sequence_pulser_logic has quit.
+2022-12-01 09:49:40 debug core.threadmanager Cleaning up thread mod-logic-sequence_pulser_logic.
+2022-12-01 09:49:40 info core.manager Deactivating logic.counterlogic
+2022-12-01 09:49:41 debug logic.counter_logic.CounterLogic Deactivation in thread <sip.voidptr object at 0x0000018B0A3AA530>
+2022-12-01 09:49:41 debug core.threadmanager Quitting thread mod-logic-counterlogic.
+2022-12-01 09:49:41 debug core.threadmanager Waiting for thread mod-logic-counterlogic to end.
+2022-12-01 09:49:41 debug core.manager Deactivation success: True
+2022-12-01 09:49:41 debug core.threadmanager Thread mod-logic-counterlogic has quit.
+2022-12-01 09:49:41 debug core.threadmanager Cleaning up thread mod-logic-counterlogic.
+2022-12-01 09:49:41 info core.manager Deactivating logic.pulsedmeasurementlogic
+2022-12-01 09:49:41 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Deactivation in thread <sip.voidptr object at 0x0000018B0A3AA490>
+2022-12-01 09:49:41 debug core.threadmanager Quitting thread mod-logic-pulsedmeasurementlogic.
+2022-12-01 09:49:41 debug core.threadmanager Waiting for thread mod-logic-pulsedmeasurementlogic to end.
+2022-12-01 09:49:41 debug core.manager Deactivation success: True
+2022-12-01 09:49:41 debug core.threadmanager Thread mod-logic-pulsedmeasurementlogic has quit.
+2022-12-01 09:49:41 debug core.threadmanager Cleaning up thread mod-logic-pulsedmeasurementlogic.
+2022-12-01 09:49:41 info core.manager Deactivating logic.sequencegeneratorlogic
+2022-12-01 09:49:42 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Deactivation in thread <sip.voidptr object at 0x0000018B7BA0CC10>
+2022-12-01 09:49:42 debug core.threadmanager Quitting thread mod-logic-sequencegeneratorlogic.
+2022-12-01 09:49:42 debug core.threadmanager Waiting for thread mod-logic-sequencegeneratorlogic to end.
+2022-12-01 09:49:42 debug core.manager Deactivation success: True
+2022-12-01 09:49:42 debug core.threadmanager Thread mod-logic-sequencegeneratorlogic has quit.
+2022-12-01 09:49:42 debug core.threadmanager Cleaning up thread mod-logic-sequencegeneratorlogic.
+2022-12-01 09:49:42 info core.manager Deactivating logic.pulsedmasterlogic
+2022-12-01 09:49:42 debug logic.pulsed.pulsed_master_logic.PulsedMasterLogic Deactivation in thread <sip.voidptr object at 0x0000018B0A14CA30>
+2022-12-01 09:49:42 debug core.threadmanager Quitting thread mod-logic-pulsedmasterlogic.
+2022-12-01 09:49:42 debug core.threadmanager Waiting for thread mod-logic-pulsedmasterlogic to end.
+2022-12-01 09:49:42 debug core.manager Deactivation success: True
+2022-12-01 09:49:42 debug core.threadmanager Thread mod-logic-pulsedmasterlogic has quit.
+2022-12-01 09:49:42 debug core.threadmanager Cleaning up thread mod-logic-pulsedmasterlogic.
+2022-12-01 09:49:42 info core.manager Deactivating logic.poimanagerlogic
+2022-12-01 09:49:43 debug logic.poi_manager_logic.PoiManagerLogic Deactivation in thread <sip.voidptr object at 0x0000018B0A14CA30>
+2022-12-01 09:49:43 debug core.threadmanager Quitting thread mod-logic-poimanagerlogic.
+2022-12-01 09:49:43 debug core.threadmanager Waiting for thread mod-logic-poimanagerlogic to end.
+2022-12-01 09:49:43 debug core.manager Deactivation success: True
+2022-12-01 09:49:43 debug core.threadmanager Thread mod-logic-poimanagerlogic has quit.
+2022-12-01 09:49:43 debug core.threadmanager Cleaning up thread mod-logic-poimanagerlogic.
+2022-12-01 09:49:43 info __main__ Closing windows...
+2022-12-01 09:49:43 info __main__ Stopping threads...
+2022-12-01 09:49:44 debug core.threadmanager Quit all threads.
+2022-12-01 09:49:44 info __main__ Qudi is closed!  Ciao.

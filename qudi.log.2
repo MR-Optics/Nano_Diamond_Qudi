@@ -1,0 +1,283 @@
+2022-12-01 10:04:54 info __main__ Loading Qudi...
+2022-12-01 10:04:55 debug core.manager Main thread is <sip.voidptr object at 0x000002124FEE8800>
+2022-12-01 10:04:55 info core.manager load.cfg config file found at C:\Users\fkala\Single_Spin_Qudi\config\load.cfg
+2022-12-01 10:04:55 info core.manager Starting Manager configuration from C:/Users/fkala/Single_Spin_Qudi/config/oy.cfg
+2022-12-01 10:04:55 info core.manager Manager configuration complete.
+2022-12-01 10:04:55 debug core.threadmanager Creating thread: "rpyc-server".
+2022-12-01 10:04:55 info core.remote Started module server at localhost on port 12345
+2022-12-01 10:04:55 info core.manager Started server rpyc://localhost:12345
+2022-12-01 10:04:55 info core.manager Qudi started.
+2022-12-01 10:04:55 info core.manager Loading module ".gui.manager.managergui"
+2022-12-01 10:04:55 info RemoteModule/12345 server started on [127.0.0.1]:12345
+2022-12-01 10:04:56 info core.manager Configuring ManagerGui as man
+2022-12-01 10:04:56 debug gui.manager.managergui.ManagerGui Activation in thread <sip.voidptr object at 0x0000021251B06C10>
+2022-12-01 10:04:58 debug gui.manager.managergui.ManagerGui IPy activation in thread <sip.voidptr object at 0x0000021251939198>
+2022-12-01 10:04:58 info gui.manager.managergui.ManagerGui IPython has kernel True
+2022-12-01 10:04:58 info gui.manager.managergui.ManagerGui IPython kernel alive True
+2022-12-01 10:04:58 debug core.manager Activation success: True
+2022-12-01 10:04:58 info core.manager Loading module ".gui.trayicon"
+2022-12-01 10:04:58 info core.manager Configuring TrayIcon as tray
+2022-12-01 10:04:58 debug gui.trayicon.TrayIcon Activation in thread <sip.voidptr object at 0x000002124EB41EE0>
+2022-12-01 10:04:58 debug core.manager Activation success: True
+2022-12-01 10:05:03 info core.manager Loading module ".logic.fit_logic"
+2022-12-01 10:05:04 info core.manager Configuring FitLogic as fitlogic
+2022-12-01 10:05:04 info logic.fit_logic.FitLogic Methods were included to FitLogic, but only if naming is right: check the doxygen documentation if you added a new method and it does not show.
+2022-12-01 10:05:04 debug core.threadmanager Creating thread: "mod-logic-fitlogic".
+2022-12-01 10:05:04 debug logic.fit_logic.FitLogic Activation in thread <sip.voidptr object at 0x0000021259B758A0>
+2022-12-01 10:05:04 debug core.manager Activation success: True
+2022-12-01 10:05:04 info core.manager Loading module ".hardware.confocal_scanner_dummy"
+2022-12-01 10:05:04 info core.manager Configuring ConfocalScannerDummy as mydummyscanner
+2022-12-01 10:05:04 info core.manager Connecting hardware.mydummyscanner.fitlogic to logic.fitlogic
+2022-12-01 10:05:04 debug hardware.confocal_scanner_dummy.ConfocalScannerDummy Activation in thread <sip.voidptr object at 0x0000021259674620>
+2022-12-01 10:05:04 debug core.manager Activation success: True
+2022-12-01 10:05:04 info core.manager Loading module ".hardware.swabian_instruments.timetagger_fast_and_slow_counter"
+2022-12-01 10:05:04 info core.manager Configuring TimeTaggerCounter as timetagger_counter
+2022-12-01 10:05:04 warning hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter No variable >> timetagger_channel_apd_1 << configured, using default value None instead.
+2022-12-01 10:05:04 warning hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter No variable >> timetagger_sum_channels << configured, using default value False instead.
+2022-12-01 10:05:04 debug hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter Activation in thread <sip.voidptr object at 0x0000021259674620>
+2022-12-01 10:05:07 info hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter TimeTagger (fast counter) configured to use  channel 1
+2022-12-01 10:05:07 debug core.manager Activation success: True
+2022-12-01 10:05:07 info core.manager Loading module ".logic.interfuse.confocal_scanner_with_timetagger"
+2022-12-01 10:05:07 info core.manager Configuring ScannerInterfuse as scanner_external_counter_interfuse
+2022-12-01 10:05:07 warning logic.interfuse.confocal_scanner_with_timetagger.ScannerInterfuse No variable >> clock_frequency << configured, using default value 100 instead.
+2022-12-01 10:05:07 info core.manager Connecting logic.scanner_external_counter_interfuse.confocalscanner1 to hardware.mydummyscanner
+2022-12-01 10:05:07 info core.manager Connecting logic.scanner_external_counter_interfuse.slowcounter to hardware.timetagger_counter
+2022-12-01 10:05:07 debug logic.interfuse.confocal_scanner_with_timetagger.ScannerInterfuse Activation in thread <sip.voidptr object at 0x0000021259C2D3C8>
+2022-12-01 10:05:07 debug core.manager Activation success: True
+2022-12-01 10:05:07 info core.manager Loading module ".logic.optimizer_logic"
+2022-12-01 10:05:07 info core.manager Configuring OptimizerLogic as optimizerlogic
+2022-12-01 10:05:07 info core.manager Connecting logic.optimizerlogic.confocalscanner1 to logic.scanner_external_counter_interfuse
+2022-12-01 10:05:07 info core.manager Connecting logic.optimizerlogic.fitlogic to logic.fitlogic
+2022-12-01 10:05:07 debug core.threadmanager Creating thread: "mod-logic-optimizerlogic".
+2022-12-01 10:05:07 debug logic.optimizer_logic.OptimizerLogic Activation in thread <sip.voidptr object at 0x0000021259C2D9E0>
+2022-12-01 10:05:07 debug core.manager Activation success: True
+2022-12-01 10:05:07 info core.manager Loading module ".logic.save_logic"
+2022-12-01 10:05:07 info core.manager Configuring SaveLogic as savelogic
+2022-12-01 10:05:07 debug core.threadmanager Creating thread: "mod-logic-savelogic".
+2022-12-01 10:05:07 debug logic.save_logic.SaveLogic Activation in thread <sip.voidptr object at 0x0000021259CE92D8>
+2022-12-01 10:05:07 debug core.manager Activation success: True
+2022-12-01 10:05:07 info core.manager Loading module ".logic.confocal_logic"
+2022-12-01 10:05:07 info core.manager Configuring ConfocalLogic as scannerlogic
+2022-12-01 10:05:07 info core.manager Connecting logic.scannerlogic.confocalscanner1 to logic.scanner_external_counter_interfuse
+2022-12-01 10:05:07 info core.manager Connecting logic.scannerlogic.savelogic to logic.savelogic
+2022-12-01 10:05:07 debug core.threadmanager Creating thread: "mod-logic-scannerlogic".
+2022-12-01 10:05:07 debug logic.confocal_logic.ConfocalLogic Activation in thread <sip.voidptr object at 0x0000021259CE9CD8>
+2022-12-01 10:05:07 debug core.manager Activation success: True
+2022-12-01 10:05:07 info core.manager Loading module ".hardware.swabian_instruments.pulse_streamer_with_waveform_memory"
+2022-12-01 10:05:07 info core.manager Configuring PulseStreamer as pulsestreamer
+2022-12-01 10:05:07 warning hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer No variable >> gated_counter_channel << configured, using default value 1 instead.
+2022-12-01 10:05:07 warning hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer No variable >> uw_list_trigger_channel << configured, using default value 4 instead.
+2022-12-01 10:05:07 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer No variable >> use_external_clock << configured, using default value False instead.
+2022-12-01 10:05:08 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer No variable >> external_clock_option << configured, using default value 0 instead.
+2022-12-01 10:05:08 debug hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Activation in thread <sip.voidptr object at 0x0000021259E20D00>
+2022-12-01 10:05:08 debug core.manager Activation success: True
+2022-12-01 10:05:08 info core.manager Loading module ".logic.pulsed.sequence_logic_for_pulser"
+2022-12-01 10:05:08 info core.manager Configuring SequenceLogicForPulser as sequence_pulser_logic
+2022-12-01 10:05:08 debug logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser The following configuration was found.
+2022-12-01 10:05:08 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser module.Class: pulsed.sequence_logic_for_pulser.SequenceLogicForPulser
+2022-12-01 10:05:08 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser connect: OrderedDict([('pulsegenerator', 'pulsestreamer'), ('optimizerlogic', 'optimizerlogic'), ('scannerlogic', 'scannerlogic')])
+2022-12-01 10:05:08 info core.manager Connecting logic.sequence_pulser_logic.pulsegenerator to hardware.pulsestreamer
+2022-12-01 10:05:08 info core.manager Connecting logic.sequence_pulser_logic.optimizerlogic to logic.optimizerlogic
+2022-12-01 10:05:08 info core.manager Connecting logic.sequence_pulser_logic.scannerlogic to logic.scannerlogic
+2022-12-01 10:05:08 debug core.threadmanager Creating thread: "mod-logic-sequence_pulser_logic".
+2022-12-01 10:05:08 debug logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Activation in thread <sip.voidptr object at 0x0000021259F3ED00>
+2022-12-01 10:05:08 debug core.manager Activation success: True
+2022-12-01 10:05:08 info core.manager Loading module ".hardware.microwave.mw_source_dummy"
+2022-12-01 10:05:08 info core.manager Configuring MicrowaveDummy as mw_source_agilent
+2022-12-01 10:05:08 debug hardware.microwave.mw_source_dummy.MicrowaveDummy Activation in thread <sip.voidptr object at 0x0000021259F3ED78>
+2022-12-01 10:05:08 debug core.manager Activation success: True
+2022-12-01 10:05:08 info core.manager Loading module ".logic.pulsed.pulsed_measurement_logic"
+2022-12-01 10:05:08 info core.manager Configuring PulsedMeasurementLogic as pulsedmeasurementlogic
+2022-12-01 10:05:08 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The following configuration was found.
+2022-12-01 10:05:08 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic module.Class: pulsed.pulsed_measurement_logic.PulsedMeasurementLogic
+2022-12-01 10:05:08 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic raw_data_save_type: text
+2022-12-01 10:05:08 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic connect: OrderedDict([('fastcounter', 'timetagger_counter'), ('pulsegenerator', 'sequence_pulser_logic'), ('fitlogic', 'fitlogic'), ('savelogic', 'savelogic'), ('microwave', 'mw_source_agilent')])
+2022-12-01 10:05:08 info core.manager Connecting logic.pulsedmeasurementlogic.fastcounter to hardware.timetagger_counter
+2022-12-01 10:05:08 info core.manager Connecting logic.pulsedmeasurementlogic.pulsegenerator to logic.sequence_pulser_logic
+2022-12-01 10:05:08 info core.manager Connecting logic.pulsedmeasurementlogic.fitlogic to logic.fitlogic
+2022-12-01 10:05:08 info core.manager Connecting logic.pulsedmeasurementlogic.savelogic to logic.savelogic
+2022-12-01 10:05:08 info core.manager Connecting logic.pulsedmeasurementlogic.microwave to hardware.mw_source_agilent
+2022-12-01 10:05:08 debug core.threadmanager Creating thread: "mod-logic-pulsedmeasurementlogic".
+2022-12-01 10:05:08 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Activation in thread <sip.voidptr object at 0x0000021259FCCA30>
+2022-12-01 10:05:08 debug core.manager Activation success: True
+2022-12-01 10:05:08 info core.manager Loading module ".logic.pulsed.sequence_generator_logic_swabian"
+2022-12-01 10:05:08 info core.manager Configuring SequenceGeneratorLogic as sequencegeneratorlogic
+2022-12-01 10:05:08 warning logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic No variable >> assets_storage_path << configured, using default value C:\Users\fkala\saved_pulsed_assets instead.
+2022-12-01 10:05:08 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic The following configuration was found.
+2022-12-01 10:05:08 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic module.Class: pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic
+2022-12-01 10:05:08 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic connect: OrderedDict([('pulsegenerator', 'sequence_pulser_logic')])
+2022-12-01 10:05:08 info core.manager Connecting logic.sequencegeneratorlogic.pulsegenerator to logic.sequence_pulser_logic
+2022-12-01 10:05:08 debug core.threadmanager Creating thread: "mod-logic-sequencegeneratorlogic".
+2022-12-01 10:05:08 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Activation in thread <sip.voidptr object at 0x0000021259CE9F58>
+2022-12-01 10:05:08 debug core.manager Activation success: True
+2022-12-01 10:05:08 info core.manager Loading module ".logic.pulsed.pulsed_master_logic"
+2022-12-01 10:05:08 info core.manager Configuring PulsedMasterLogic as pulsedmasterlogic
+2022-12-01 10:05:08 info core.manager Connecting logic.pulsedmasterlogic.pulsedmeasurementlogic to logic.pulsedmeasurementlogic
+2022-12-01 10:05:08 info core.manager Connecting logic.pulsedmasterlogic.sequencegeneratorlogic to logic.sequencegeneratorlogic
+2022-12-01 10:05:09 debug core.threadmanager Creating thread: "mod-logic-pulsedmasterlogic".
+2022-12-01 10:05:09 debug logic.pulsed.pulsed_master_logic.PulsedMasterLogic Activation in thread <sip.voidptr object at 0x000002125A1712D8>
+2022-12-01 10:05:09 debug core.manager Activation success: True
+2022-12-01 10:05:09 info core.manager Loading module ".gui.pulsed.pulsed_maingui"
+2022-12-01 10:05:09 info core.manager Configuring PulsedMeasurementGui as pulsedmeasurement
+2022-12-01 10:05:09 info core.manager Connecting gui.pulsedmeasurement.pulsedmasterlogic to logic.pulsedmasterlogic
+2022-12-01 10:05:09 debug gui.pulsed.pulsed_maingui.PulsedMeasurementGui Activation in thread <sip.voidptr object at 0x000002125A1714E0>
+2022-12-01 10:05:09 debug core.manager Activation success: True
+2022-12-01 10:05:12 info core.manager Loading module ".logic.counter_logic"
+2022-12-01 10:05:12 info core.manager Configuring CounterLogic as counterlogic
+2022-12-01 10:05:12 debug logic.counter_logic.CounterLogic The following configuration was found.
+2022-12-01 10:05:12 debug logic.counter_logic.CounterLogic module.Class: counter_logic.CounterLogic
+2022-12-01 10:05:12 debug logic.counter_logic.CounterLogic connect: OrderedDict([('counter1', 'timetagger_counter'), ('savelogic', 'savelogic')])
+2022-12-01 10:05:12 info core.manager Connecting logic.counterlogic.counter1 to hardware.timetagger_counter
+2022-12-01 10:05:12 info core.manager Connecting logic.counterlogic.savelogic to logic.savelogic
+2022-12-01 10:05:12 debug core.threadmanager Creating thread: "mod-logic-counterlogic".
+2022-12-01 10:05:12 debug logic.counter_logic.CounterLogic Activation in thread <sip.voidptr object at 0x000002125A1717D8>
+2022-12-01 10:05:12 debug core.manager Activation success: True
+2022-12-01 10:05:12 info core.manager Loading module ".gui.counter.countergui"
+2022-12-01 10:05:12 info core.manager Configuring CounterGui as counter
+2022-12-01 10:05:12 info core.manager Connecting gui.counter.counterlogic1 to logic.counterlogic
+2022-12-01 10:05:12 debug gui.counter.countergui.CounterGui Activation in thread <sip.voidptr object at 0x000002125A171760>
+2022-12-01 10:05:12 debug core.manager Activation success: True
+2022-12-01 10:05:33 info core.manager Loading module ".gui.pulsestreamer.pulsestreamergui"
+2022-12-01 10:05:33 info core.manager Configuring pulsestreamerGui as pulsestreamer_output
+2022-12-01 10:05:33 info core.manager Connecting gui.pulsestreamer_output.pulsestreamer to logic.sequence_pulser_logic
+2022-12-01 10:05:33 debug gui.pulsestreamer.pulsestreamergui.pulsestreamerGui Activation in thread <sip.voidptr object at 0x0000021259FCC2B0>
+2022-12-01 10:05:33 debug core.manager Activation success: True
+2022-12-01 10:05:41 info hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter set up counter with 50
+2022-12-01 10:06:05 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 228360050, mod 0
+2022-12-01 10:06:14 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble T1 to device: 9 sec
+2022-12-01 10:06:14 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseSequence T1 to device: 9 sec.
+2022-12-01 10:06:14 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:06:37 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Waveform already sampled: T1
+2022-12-01 10:06:37 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseSequence T1 to device: 0 sec.
+2022-12-01 10:06:37 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:06:44 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-12-01 10:06:57 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-12-01 10:06:57 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 10:06:57 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-12-01 10:07:02 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-12-01 10:07:41 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Waveform already sampled: T1
+2022-12-01 10:07:41 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseSequence T1 to device: 0 sec.
+2022-12-01 10:07:41 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:07:46 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Waveform already sampled: T1
+2022-12-01 10:07:46 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseSequence T1 to device: 0 sec.
+2022-12-01 10:07:46 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:08:22 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:10:20 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-12-01 10:10:50 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-12-01 10:10:50 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 10:10:50 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-12-01 10:10:55 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True
+2022-12-01 10:11:13 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Waveform already sampled: T1
+2022-12-01 10:11:13 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseSequence T1 to device: 0 sec.
+2022-12-01 10:11:13 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:12:15 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 470639, mod 0
+2022-12-01 10:12:15 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble T1_exp to device: 0 sec
+2022-12-01 10:12:15 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:12:24 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 10:12:29 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 10:12:34 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 10:12:39 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 10:12:41 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 10:12:41 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 10:12:58 error logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Unable to invoke measurement settings.
+This feature can only be used when creating the pulse sequence via predefined methods.
+Aborting measurement start.
+2022-12-01 10:18:01 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic length: 470639, mod 0
+2022-12-01 10:18:01 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseBlockEnsemble T1_exp to device: 0 sec
+2022-12-01 10:18:01 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:18:12 warning logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Only zeros received from fast counter!
+2022-12-01 10:18:12 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 10:18:33 error logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Unable to invoke measurement settings.
+This feature can only be used when creating the pulse sequence via predefined methods.
+Aborting measurement start.
+2022-12-01 10:23:31 info core.manager Loading module ".logic.interfuse.odmr_counter_microwave_interfuse"
+2022-12-01 10:23:31 info core.manager Configuring ODMRCounterMicrowaveInterfuse as odmr_counter_microwave_interfuse
+2022-12-01 10:23:31 info core.manager Connecting logic.odmr_counter_microwave_interfuse.slowcounter to hardware.timetagger_counter
+2022-12-01 10:23:31 info core.manager Connecting logic.odmr_counter_microwave_interfuse.microwave to hardware.mw_source_agilent
+2022-12-01 10:23:31 info core.manager Connecting logic.odmr_counter_microwave_interfuse.pulse_streamer to hardware.pulsestreamer
+2022-12-01 10:23:31 debug core.threadmanager Creating thread: "mod-logic-odmr_counter_microwave_interfuse".
+2022-12-01 10:23:31 debug logic.interfuse.odmr_counter_microwave_interfuse.ODMRCounterMicrowaveInterfuse Activation in thread <sip.voidptr object at 0x000002125C65E2B0>
+2022-12-01 10:23:31 debug core.manager Activation success: True
+2022-12-01 10:23:31 info core.manager Loading module ".logic.taskrunner"
+2022-12-01 10:23:31 info core.manager Configuring TaskRunner as tasklogic
+2022-12-01 10:23:31 debug core.threadmanager Creating thread: "mod-logic-tasklogic".
+2022-12-01 10:23:32 debug logic.taskrunner.TaskRunner Activation in thread <sip.voidptr object at 0x000002125C6681C0>
+2022-12-01 10:23:32 info core.manager Task runner registered.
+2022-12-01 10:23:32 debug core.manager Activation success: True
+2022-12-01 10:23:32 info core.manager Loading module ".logic.odmr_logic"
+2022-12-01 10:23:32 info core.manager Configuring ODMRLogic as odmrlogic2
+2022-12-01 10:23:32 info core.manager Connecting logic.odmrlogic2.odmrcounter to logic.odmr_counter_microwave_interfuse
+2022-12-01 10:23:32 info core.manager Connecting logic.odmrlogic2.fitlogic to logic.fitlogic
+2022-12-01 10:23:32 info core.manager Connecting logic.odmrlogic2.microwave1 to logic.odmr_counter_microwave_interfuse
+2022-12-01 10:23:32 info core.manager Connecting logic.odmrlogic2.savelogic to logic.savelogic
+2022-12-01 10:23:32 info core.manager Connecting logic.odmrlogic2.taskrunner to logic.tasklogic
+2022-12-01 10:23:32 debug core.threadmanager Creating thread: "mod-logic-odmrlogic2".
+2022-12-01 10:23:32 debug logic.odmr_logic.ODMRLogic Activation in thread <sip.voidptr object at 0x000002125C668B48>
+2022-12-01 10:23:32 info hardware.microwave.mw_source_dummy.MicrowaveDummy MicrowaveDummy>ext_trigger set
+2022-12-01 10:23:32 info hardware.microwave.mw_source_dummy.MicrowaveDummy MicrowaveDummy>off
+2022-12-01 10:23:32 error logic.odmr_logic.ODMRLogic Error during activation
+Traceback (most recent call last):
+  File "C:\Users\fkala\Single_Spin_Qudi\core\module.py", line 96, in wrap_event
+    base_event(*args, **kwargs)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\fysom\__init__.py", line 311, in fn
+    self.transition()
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\fysom\__init__.py", line 306, in _tran
+    self._after_event(e)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\fysom\__init__.py", line 338, in _after_event
+    return getattr(self, fnname)(e)
+  File "C:\Users\fkala\Anaconda3\envs\qudi\lib\site-packages\fysom\__init__.py", line 95, in _callback
+    return func(obj, *args, **kwargs)
+  File "C:\Users\fkala\Single_Spin_Qudi\core\module.py", line 216, in __load_status_vars_activate
+    self.on_activate()
+  File "C:\Users\fkala\Single_Spin_Qudi\logic\odmr_logic.py", line 134, in on_activate
+    self.set_cw_parameters(self.cw_mw_frequency, self.cw_mw_power)
+  File "C:\Users\fkala\Single_Spin_Qudi\logic\odmr_logic.py", line 381, in set_cw_parameters
+    power_to_set)
+  File "C:\Users\fkala\Single_Spin_Qudi\logic\interfuse\odmr_counter_microwave_interfuse.py", line 215, in set_cw
+    return self._mw_device.set_cw(freq=frequency, power=power)
+TypeError: set_cw() got an unexpected keyword argument 'freq'
+2022-12-01 10:23:32 debug core.manager Activation success: False
+2022-12-01 10:23:33 info core.manager Loading module ".gui.odmr.odmrgui"
+2022-12-01 10:23:33 info core.manager Configuring ODMRGui as odmr
+2022-12-01 10:23:33 info core.manager Connecting gui.odmr.odmrlogic1 to logic.odmrlogic2
+2022-12-01 10:23:33 info core.manager Connecting gui.odmr.savelogic to logic.savelogic
+2022-12-01 10:23:33 debug gui.odmr.odmrgui.ODMRGui Activation in thread <sip.voidptr object at 0x0000021259FB5698>
+2022-12-01 10:23:33 debug core.manager Activation success: True
+2022-12-01 10:23:44 info hardware.microwave.mw_source_dummy.MicrowaveDummy MicrowaveDummy>ext_trigger set
+2022-12-01 10:23:44 info hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter set up counter with 50
+2022-12-01 10:23:44 debug hardware.microwave.mw_source_dummy.MicrowaveDummy MicrowaveDummy>set_list, frequency_list: [2.800e+09 2.801e+09 2.802e+09 2.803e+09 2.804e+09 2.805e+09 2.806e+09
+ 2.807e+09 2.808e+09 2.809e+09 2.810e+09 2.811e+09 2.812e+09 2.813e+09
+ 2.814e+09 2.815e+09 2.816e+09 2.817e+09 2.818e+09 2.819e+09 2.820e+09
+ 2.821e+09 2.822e+09 2.823e+09 2.824e+09 2.825e+09 2.826e+09 2.827e+09
+ 2.828e+09 2.829e+09 2.830e+09 2.831e+09 2.832e+09 2.833e+09 2.834e+09
+ 2.835e+09 2.836e+09 2.837e+09 2.838e+09 2.839e+09 2.840e+09 2.841e+09
+ 2.842e+09 2.843e+09 2.844e+09 2.845e+09 2.846e+09 2.847e+09 2.848e+09
+ 2.849e+09 2.850e+09 2.851e+09 2.852e+09 2.853e+09 2.854e+09 2.855e+09
+ 2.856e+09 2.857e+09 2.858e+09 2.859e+09 2.860e+09 2.861e+09 2.862e+09
+ 2.863e+09 2.864e+09 2.865e+09 2.866e+09 2.867e+09 2.868e+09 2.869e+09
+ 2.870e+09 2.871e+09 2.872e+09 2.873e+09 2.874e+09 2.875e+09 2.876e+09
+ 2.877e+09 2.878e+09 2.879e+09 2.880e+09 2.881e+09 2.882e+09 2.883e+09
+ 2.884e+09 2.885e+09 2.886e+09 2.887e+09 2.888e+09 2.889e+09 2.890e+09
+ 2.891e+09 2.892e+09 2.893e+09 2.894e+09 2.895e+09 2.896e+09 2.897e+09
+ 2.898e+09 2.899e+09 2.900e+09], power: -31.000000
+2022-12-01 10:23:45 info hardware.microwave.mw_source_dummy.MicrowaveDummy MicrowaveDummy>List mode output on
+2022-12-01 10:23:45 debug logic.odmr_logic.ODMRLogic Estimated number of raw data lines: 297
+2022-12-01 10:31:17 info core.manager Deactivating gui.odmr
+2022-12-01 10:31:17 debug gui.odmr.odmrgui.ODMRGui Deactivation in thread <sip.voidptr object at 0x000002125C668440>
+2022-12-01 10:31:17 debug core.manager Deactivation success: True
+2022-12-01 10:31:17 info core.manager load.cfg config file found at C:\Users\fkala\Single_Spin_Qudi\config\load.cfg
+2022-12-01 10:31:17 info core.manager Loading module ".gui.odmr.odmrgui"
+2022-12-01 10:31:17 info core.manager Configuring ODMRGui as odmr
+2022-12-01 10:31:17 info core.manager Connecting gui.odmr.odmrlogic1 to logic.odmrlogic2
+2022-12-01 10:31:17 info core.manager Connecting gui.odmr.savelogic to logic.savelogic
+2022-12-01 10:31:17 debug gui.odmr.odmrgui.ODMRGui Activation in thread <sip.voidptr object at 0x0000021259FB5468>
+2022-12-01 10:31:17 debug core.manager Activation success: True
+2022-12-01 10:31:19 error logic.odmr_logic.ODMRLogic Can not start ODMR scan. Logic is already locked.
+2022-12-01 10:36:09 debug logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Waveform already sampled: T1
+2022-12-01 10:36:09 info logic.pulsed.sequence_generator_logic_swabian.SequenceGeneratorLogic Time needed for sampling and writing PulseSequence T1 to device: 0 sec.
+2022-12-01 10:36:09 debug logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic The set measurement_information did not contain all the necessary information or was not a dict. Setting empty dict.
+2022-12-01 10:36:16 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser False
+2022-12-01 10:36:54 info hardware.swabian_instruments.pulse_streamer_with_waveform_memory.PulseStreamer Pulse seq is done
+2022-12-01 10:36:54 info logic.pulsed.pulsed_measurement_logic.PulsedMeasurementLogic Stopped pulsed measurement
+2022-12-01 10:36:54 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser Step 1 out of 1
+2022-12-01 10:36:59 info logic.pulsed.sequence_logic_for_pulser.SequenceLogicForPulser True

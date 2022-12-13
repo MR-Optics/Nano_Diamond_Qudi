@@ -1,0 +1,91 @@
+2022-12-13 16:14:43 info __main__ Loading Qudi...
+2022-12-13 16:14:44 debug core.manager Main thread is <sip.voidptr object at 0x00000248F4D1B558>
+2022-12-13 16:14:44 info core.manager load.cfg config file found at C:\Users\fkala\Single_Spin_Qudi\config\load.cfg
+2022-12-13 16:14:44 info core.manager Starting Manager configuration from C:/Users/fkala/Single_Spin_Qudi/config/oy.cfg
+2022-12-13 16:14:44 info core.manager Manager configuration complete.
+2022-12-13 16:14:44 debug core.threadmanager Creating thread: "rpyc-server".
+2022-12-13 16:14:44 info core.remote Started module server at localhost on port 12345
+2022-12-13 16:14:44 info core.manager Started server rpyc://localhost:12345
+2022-12-13 16:14:44 info core.manager Qudi started.
+2022-12-13 16:14:44 info core.manager Loading module ".gui.manager.managergui"
+2022-12-13 16:14:44 info RemoteModule/12345 server started on [127.0.0.1]:12345
+2022-12-13 16:14:46 info core.manager Configuring ManagerGui as man
+2022-12-13 16:14:46 debug gui.manager.managergui.ManagerGui Activation in thread <sip.voidptr object at 0x00000248F6929968>
+2022-12-13 16:14:49 debug gui.manager.managergui.ManagerGui IPy activation in thread <sip.voidptr object at 0x00000248F61B8AF8>
+2022-12-13 16:14:49 info gui.manager.managergui.ManagerGui IPython has kernel True
+2022-12-13 16:14:49 info gui.manager.managergui.ManagerGui IPython kernel alive True
+2022-12-13 16:14:49 debug core.manager Activation success: True
+2022-12-13 16:14:49 info core.manager Loading module ".gui.trayicon"
+2022-12-13 16:14:49 info core.manager Configuring TrayIcon as tray
+2022-12-13 16:14:49 debug gui.trayicon.TrayIcon Activation in thread <sip.voidptr object at 0x00000248F4235F30>
+2022-12-13 16:14:49 debug core.manager Activation success: True
+2022-12-13 16:15:02 info core.manager Loading module ".hardware.swabian_instruments.timetagger_fast_and_slow_counter"
+2022-12-13 16:15:02 info core.manager Configuring TimeTaggerCounter as timetagger_counter
+2022-12-13 16:15:02 warning hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter No variable >> timetagger_channel_apd_1 << configured, using default value None instead.
+2022-12-13 16:15:02 warning hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter No variable >> timetagger_sum_channels << configured, using default value False instead.
+2022-12-13 16:15:02 debug hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter Activation in thread <sip.voidptr object at 0x00000248F4235DC8>
+2022-12-13 16:15:05 info hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter TimeTagger (fast counter) configured to use  channel 1
+2022-12-13 16:15:05 debug core.manager Activation success: True
+2022-12-13 16:15:05 info core.manager Loading module ".logic.save_logic"
+2022-12-13 16:15:06 info core.manager Configuring SaveLogic as savelogic
+2022-12-13 16:15:06 debug core.threadmanager Creating thread: "mod-logic-savelogic".
+2022-12-13 16:15:06 debug logic.save_logic.SaveLogic Activation in thread <sip.voidptr object at 0x00000248FEB8C648>
+2022-12-13 16:15:06 debug core.manager Activation success: True
+2022-12-13 16:15:06 info core.manager Loading module ".logic.counter_logic"
+2022-12-13 16:15:06 info core.manager Configuring CounterLogic as counterlogic
+2022-12-13 16:15:06 debug logic.counter_logic.CounterLogic The following configuration was found.
+2022-12-13 16:15:06 debug logic.counter_logic.CounterLogic module.Class: counter_logic.CounterLogic
+2022-12-13 16:15:06 debug logic.counter_logic.CounterLogic connect: OrderedDict([('counter1', 'timetagger_counter'), ('savelogic', 'savelogic')])
+2022-12-13 16:15:06 info core.manager Connecting logic.counterlogic.counter1 to hardware.timetagger_counter
+2022-12-13 16:15:06 info core.manager Connecting logic.counterlogic.savelogic to logic.savelogic
+2022-12-13 16:15:06 debug core.threadmanager Creating thread: "mod-logic-counterlogic".
+2022-12-13 16:15:06 debug logic.counter_logic.CounterLogic Activation in thread <sip.voidptr object at 0x00000248FEB8CC38>
+2022-12-13 16:15:06 debug core.manager Activation success: True
+2022-12-13 16:15:06 info core.manager Loading module ".gui.counter.countergui"
+2022-12-13 16:15:06 info core.manager Configuring CounterGui as counter
+2022-12-13 16:15:06 info core.manager Connecting gui.counter.counterlogic1 to logic.counterlogic
+2022-12-13 16:15:06 debug gui.counter.countergui.CounterGui Activation in thread <sip.voidptr object at 0x00000248FEB8CCB0>
+2022-12-13 16:15:06 debug core.manager Activation success: True
+2022-12-13 16:15:36 error root 
+Traceback (most recent call last):
+  File "C:\Users\fkala\Single_Spin_Qudi\gui\manager\managergui.py", line 642, in checkModuleState
+    def checkModuleState(self):
+KeyboardInterrupt
+2022-12-13 16:15:36 debug core.manager Deactivating ['timetagger_counter', 'savelogic', 'counterlogic', 'counter', 'man', 'tray']
+2022-12-13 16:15:36 info core.manager Deactivating module gui.tray
+2022-12-13 16:15:36 info core.manager Deactivating gui.tray
+2022-12-13 16:15:36 debug gui.trayicon.TrayIcon Deactivation in thread <sip.voidptr object at 0x00000248FBF258A0>
+2022-12-13 16:15:36 debug core.manager Deactivation success: True
+2022-12-13 16:15:36 info core.manager Deactivating module gui.man
+2022-12-13 16:15:36 info core.manager Deactivating gui.man
+2022-12-13 16:15:36 debug gui.manager.managergui.ManagerGui Deactivation in thread <sip.voidptr object at 0x00000248FBF258A0>
+2022-12-13 16:15:36 debug gui.manager.managergui.ManagerGui IPy deactivation: <sip.voidptr object at 0x00000248FBF25940>
+2022-12-13 16:15:36 debug core.manager Deactivation success: True
+2022-12-13 16:15:36 info core.manager Deactivating module gui.counter
+2022-12-13 16:15:36 info core.manager Deactivating gui.counter
+2022-12-13 16:15:36 debug gui.counter.countergui.CounterGui Deactivation in thread <sip.voidptr object at 0x00000248FB9B1A58>
+2022-12-13 16:15:36 debug core.manager Deactivation success: True
+2022-12-13 16:15:36 info core.manager Deactivating module logic.counterlogic
+2022-12-13 16:15:36 info core.manager Deactivating logic.counterlogic
+2022-12-13 16:15:36 debug logic.counter_logic.CounterLogic Deactivation in thread <sip.voidptr object at 0x00000248FBC076C0>
+2022-12-13 16:15:36 debug core.threadmanager Quitting thread mod-logic-counterlogic.
+2022-12-13 16:15:36 debug core.threadmanager Waiting for thread mod-logic-counterlogic to end.
+2022-12-13 16:15:36 debug core.manager Deactivation success: True
+2022-12-13 16:15:36 debug core.threadmanager Thread mod-logic-counterlogic has quit.
+2022-12-13 16:15:36 debug core.threadmanager Cleaning up thread mod-logic-counterlogic.
+2022-12-13 16:15:36 info core.manager Deactivating module logic.savelogic
+2022-12-13 16:15:36 info core.manager Deactivating logic.savelogic
+2022-12-13 16:15:36 debug logic.save_logic.SaveLogic Deactivation in thread <sip.voidptr object at 0x00000248FBF25850>
+2022-12-13 16:15:36 debug core.threadmanager Quitting thread mod-logic-savelogic.
+2022-12-13 16:15:36 debug core.threadmanager Waiting for thread mod-logic-savelogic to end.
+2022-12-13 16:15:36 debug core.manager Deactivation success: True
+2022-12-13 16:15:36 debug core.threadmanager Thread mod-logic-savelogic has quit.
+2022-12-13 16:15:36 debug core.threadmanager Cleaning up thread mod-logic-savelogic.
+2022-12-13 16:15:36 info core.manager Deactivating module hardware.timetagger_counter
+2022-12-13 16:15:36 info core.manager Deactivating hardware.timetagger_counter
+2022-12-13 16:15:36 debug hardware.swabian_instruments.timetagger_fast_and_slow_counter.TimeTaggerCounter Deactivation in thread <sip.voidptr object at 0x00000248FBF257D8>
+2022-12-13 16:15:36 debug core.manager Deactivation success: True
+2022-12-13 16:15:36 info __main__ Closing windows...
+2022-12-13 16:15:36 info __main__ Stopping threads...
+2022-12-13 16:15:36 debug core.threadmanager Quit all threads.
+2022-12-13 16:15:36 info __main__ Qudi is closed!  Ciao.

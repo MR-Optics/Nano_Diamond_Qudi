@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="371b0618-42d9-44e4-84e0-3e7884d856d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/gui/pulsed/pulsed_maingui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/pulsed/pulsed_maingui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/pulsed/ui_pulse_analysis.ui" beforeDir="false" afterPath="$PROJECT_DIR$/gui/pulsed/ui_pulse_analysis.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/pulsed/ui_pulse_editor.ui" beforeDir="false" afterPath="$PROJECT_DIR$/gui/pulsed/ui_pulse_editor.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/pulsestreamer/pulsestreamergui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/pulsestreamer/pulsestreamergui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/pulsestreamer/ui_output.ui" beforeDir="false" afterPath="$PROJECT_DIR$/gui/pulsestreamer/ui_output.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/confocal_scanner_dummy.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/confocal_scanner_dummy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/microwave/mw_source_agilent.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/microwave/mw_source_agilent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/microwave/mw_source_srssg.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/microwave/mw_source_srssg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/motor/aptmotor.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/motor/aptmotor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/swabian_instruments/pulse_streamer.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/swabian_instruments/pulse_streamer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/swabian_instruments/pulse_streamer_with_waveform_memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/swabian_instruments/pulse_streamer_with_waveform_memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/swabian_instruments/timetagger_fast_and_slow_counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/swabian_instruments/timetagger_fast_and_slow_counter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/interfuse/confocal_scanner_with_timetagger.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/interfuse/confocal_scanner_with_timetagger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/interfuse/odmr_counter_microwave_interfuse.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/interfuse/odmr_counter_microwave_interfuse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/interfuse/odmr_counter_swabian_instruments.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/interfuse/odmr_counter_swabian_instruments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/odmr_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/odmr_logic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/optimizer_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/optimizer_logic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/pulsed/predefined_generate_methods/basic_predefined_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/pulsed/predefined_generate_methods/basic_predefined_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/pulsed/pulsed_master_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/pulsed/pulsed_master_logic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/pulsed/pulsed_measurement_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/pulsed/pulsed_measurement_logic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/pulsed/sequence_generator_logic_swabian.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/pulsed/sequence_generator_logic_swabian.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/pulsed/sequence_logic_for_pulser.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/pulsed/sequence_logic_for_pulser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/tasks/refocus.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/tasks/refocus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="1bt6Aou39TbU1IUgu7EKLARMorh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.debugger.python&quot;
+  }
+}</component>
+  <component name="PyDebuggerOptionsProvider">
+    <option name="mySupportGeventDebugging" value="true" />
+    <option name="myPyQtBackend" value="pyqt5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fkala\Single_Spin_Qudi\hardware\microwave" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.start">
+    <configuration name="ND-PSD (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Single_Spin_Qudi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="M:/Experimental/Analysis/Codes" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="M:/Experimental/Analysis/Codes/ND-PSD.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ND-PSD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Single_Spin_Qudi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ND-PSD.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PSD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Single_Spin_Qudi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Analysis" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Analysis/PSD.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fati_abar_fit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Single_Spin_Qudi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fati_abar_fit.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Single_Spin_Qudi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.start" />
+        <item itemvalue="Python.ND-PSD" />
+        <item itemvalue="Python.ND-PSD (1)" />
+        <item itemvalue="Python.fati_abar_fit" />
+        <item itemvalue="Python.PSD" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="371b0618-42d9-44e4-84e0-3e7884d856d4" name="Default Changelist" comment="" />
+      <created>1589448221635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589448221635</updated>
+      <workItem from="1627638441634" duration="33000" />
+      <workItem from="1627638494113" duration="4000" />
+      <workItem from="1627638526135" duration="30000" />
+      <workItem from="1627638590001" duration="17000" />
+      <workItem from="1627638640562" duration="53000" />
+      <workItem from="1627638715481" duration="11824000" />
+      <workItem from="1627651246966" duration="22084000" />
+      <workItem from="1629716913322" duration="39726000" />
+      <workItem from="1630317973221" duration="3903000" />
+      <workItem from="1630413778693" duration="686000" />
+      <workItem from="1630417092923" duration="370000" />
+      <workItem from="1630419762290" duration="7131000" />
+      <workItem from="1631870288221" duration="49305000" />
+      <workItem from="1632915506345" duration="3830000" />
+      <workItem from="1633441432877" duration="2915000" />
+      <workItem from="1633612308558" duration="718000" />
+      <workItem from="1638442730468" duration="1446000" />
+      <workItem from="1639130130409" duration="10619000" />
+      <workItem from="1639654004499" duration="5731000" />
+      <workItem from="1639735405609" duration="4686000" />
+      <workItem from="1640011636931" duration="2860000" />
+      <workItem from="1641895066985" duration="1218000" />
+      <workItem from="1642155240093" duration="23885000" />
+      <workItem from="1643993582272" duration="3796000" />
+      <workItem from="1644511670485" duration="2604000" />
+      <workItem from="1644573985737" duration="3917000" />
+      <workItem from="1644840496832" duration="17634000" />
+      <workItem from="1647021401012" duration="2494000" />
+      <workItem from="1647954234901" duration="607000" />
+      <workItem from="1648203048519" duration="21223000" />
+      <workItem from="1649143327344" duration="184000" />
+      <workItem from="1649143577212" duration="10851000" />
+      <workItem from="1650447655303" duration="643000" />
+      <workItem from="1650619676358" duration="627000" />
+      <workItem from="1650629670417" duration="1384000" />
+      <workItem from="1650879897992" duration="133000" />
+      <workItem from="1650880064819" duration="54000" />
+      <workItem from="1650889151906" duration="774000" />
+      <workItem from="1650890026563" duration="32000" />
+      <workItem from="1650890519166" duration="14012000" />
+      <workItem from="1651226324773" duration="236000" />
+      <workItem from="1651227612001" duration="5932000" />
+      <workItem from="1651235398376" duration="93000" />
+      <workItem from="1651235506318" duration="18919000" />
+      <workItem from="1651850762022" duration="30090000" />
+      <workItem from="1652556577013" duration="4452000" />
+      <workItem from="1652687121805" duration="34857000" />
+      <workItem from="1653466110438" duration="10978000" />
+      <workItem from="1654084096349" duration="35535000" />
+      <workItem from="1654767114798" duration="18893000" />
+      <workItem from="1655212510613" duration="6165000" />
+      <workItem from="1655292811623" duration="114000" />
+      <workItem from="1655292976017" duration="766000" />
+      <workItem from="1655293916970" duration="3248000" />
+      <workItem from="1655382802938" duration="2794000" />
+      <workItem from="1655670163822" duration="4499000" />
+      <workItem from="1655904605044" duration="21039000" />
+      <workItem from="1656594721200" duration="735000" />
+      <workItem from="1656613230315" duration="19704000" />
+      <workItem from="1657544904709" duration="1613000" />
+      <workItem from="1657700931010" duration="16560000" />
+      <workItem from="1658485246350" duration="5916000" />
+      <workItem from="1658998879797" duration="2837000" />
+      <workItem from="1659361342593" duration="731000" />
+      <workItem from="1659363606204" duration="830000" />
+      <workItem from="1659513451740" duration="618000" />
+      <workItem from="1661763652503" duration="635000" />
+      <workItem from="1662237979446" duration="3709000" />
+      <workItem from="1662479819667" duration="2342000" />
+      <workItem from="1662970960589" duration="5255000" />
+      <workItem from="1663576143261" duration="624000" />
+      <workItem from="1668418777453" duration="4096000" />
+      <workItem from="1670944478177" duration="59000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/logic/interfuse/odmr_counter_microwave_interfuse.py</url>
+          <line>161</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hardware/microwave/mw_source_agilent.py</url>
+          <line>218</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hardware/microwave/mw_source_agilent.py</url>
+          <line>254</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/start_py$ND_PSD__1_.coverage" NAME="ND-PSD (1) Coverage Results" MODIFIED="1662480824808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="M:/Experimental/Analysis/Codes" />
+    <SUITE FILE_PATH="coverage/start_py$fati_abar_fit__1_.coverage" NAME="fati_abar_fit (1) Coverage Results" MODIFIED="1652188456756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fati_abar_fit_py$ND_PSD.coverage" NAME="ND-PSD Coverage Results" MODIFIED="1662452648418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/start_py$PSD.coverage" NAME="PSD Coverage Results" MODIFIED="1654688088926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Analysis" />
+    <SUITE FILE_PATH="coverage/start_py$start.coverage" NAME="start Coverage Results" MODIFIED="1670944481796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/start_py$fati_pulse_fit.coverage" NAME="fati_pulse_fit Coverage Results" MODIFIED="1652188417000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Analysis" />
+    <SUITE FILE_PATH="coverage/start_py$fati_abar_fit.coverage" NAME="fati_abar_fit Coverage Results" MODIFIED="1657920752815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/start_py$fati_pulse_fit__1_.coverage" NAME="fati_pulse_fit (1) Coverage Results" MODIFIED="1652188493825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fati_abar_fit_py$start.coverage" NAME="start Coverage Results" MODIFIED="1662452685841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fati_pulse_fit_py$fati_pulse_fit.coverage" NAME="fati_pulse_fit Coverage Results" MODIFIED="1651236056688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Analysis" />
+    <SUITE FILE_PATH="coverage/fati_pulse_fit_py$fati_pulse_fit__1_.coverage" NAME="fati_pulse_fit (1) Coverage Results" MODIFIED="1651248994512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/start_py$ND_PSD.coverage" NAME="ND-PSD Coverage Results" MODIFIED="1662481254015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fati_pulse_fit_py$start.coverage" NAME="start Coverage Results" MODIFIED="1651823163032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mw_source_agilent_py$start.coverage" NAME="start Coverage Results" MODIFIED="1630411186017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fati_abar_fit_py$fati_abar_fit.coverage" NAME="fati_abar_fit Coverage Results" MODIFIED="1655674521600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
